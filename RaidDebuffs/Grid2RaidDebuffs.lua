@@ -22,6 +22,10 @@ local EJ_GetEncounterInfoByIndex = EJ_GetEncounterInfoByIndex or Grid2.Dummy
 
 GSRD.defaultDB = { profile = { debuffs = {}, enabledModules = {} } }
 
+local function GetRaidDebuffs()
+	return spells_order
+end
+Grid2.IsRaidDebuff = GetRaidDebuffs
 -- general variables
 local instance_ej_id
 local instance_map_id
